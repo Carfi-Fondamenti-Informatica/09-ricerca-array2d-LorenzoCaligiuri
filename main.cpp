@@ -13,7 +13,7 @@ int main() {
     cout<<"inserisci d1"<<endl;
     cin>>d1;
     if(f(d2, d1, i)==true){
-        cout<<i+1;
+        cout<<i;
     }else{
         cout<<"non presente"<<endl;
     }
