@@ -1,19 +1,16 @@
-#include "lib.h"
-
-bool f(char d2[10][20], char d1[10],int &i){
-    for(int k=0; k<20; k++){
-        if(d1==d2[k]){
-            return true;
-        }else{
-            for(int j=0; j<10; j++){
-                if(d1[k]==d2[j][k]){
-                    return i;
-                }else{
-                    i++;
+bool f(char d2[10][20], char d1[20],int &i){
+    for(int x=0; x<10; x++){
+        for(int y=0; y<20; y++){
+            if(d2[x][y]!=d1[y]){
+                y=20;
+            }else{
+                if(y==19){
+                    i=x;
+                    return true;
                 }
             }
-            return false;
         }
     }
+    return false;
 }
 
